@@ -1,0 +1,15 @@
+
+1 下载，安装，建库
+mysql https://dev.mysql.com/downloads/mysql 密码:sql@123456
+mysql workbench https://dev.mysql.com/downloads/workbench
+连接两者
+
+2 建表，基本的sql语句
+3 外键 & 连表查询
+
+
+
+
+
+
+

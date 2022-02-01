@@ -1,0 +1,25 @@
+{
+  "parser": "babel-eslint",
+  "env": {
+    "amd": true,
+    "es6": true,
+    "browser": true,
+    "node": true
+  },
+  "globals": {
+    "document": false,
+    "navigator": false,  
+    "window": false
+  },
+  "rules": {
+    "indent": ["error", 2],
+    "quotes": [
+      "error",
+      "single",
+      {
+        "allowTemplateLiterals": true
+      }
+    ],
+    "semi": ["error", "never"]
+  }
+}
