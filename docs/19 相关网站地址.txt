@@ -1,0 +1,16 @@
+
+
+
+Bootstrap 中文文档
+https://v3.bootcss.com/getting-started/#download
+
+Font Awesome
+https://fontawesome.dashgame.com/
+
+npm i @popperjs/core 弹框功能
+在node_modules包中找对应压缩包
+
+
+
+
+

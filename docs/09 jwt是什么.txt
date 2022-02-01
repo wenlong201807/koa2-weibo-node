@@ -1,0 +1,13 @@
+
+1 jwt  json web token
+2 用户认证成功之后，server端返回一个加密的token给客户端
+3 客户端后续每次请求都带token，以示当前的用户身份
+
+加密解密中间件  npm i koa-jwt --save  https://www.npmjs.com/package/koa-jwt
+
+返回401  -> 需要密码验证
+
+
+
+
+

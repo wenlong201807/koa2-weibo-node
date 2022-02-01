@@ -3,7 +3,7 @@
  * @author wenlong
  */
 
-import { isProd } from '../utils/env';
+ const { isProd } = require('../utils/env')
 
 let REDIS_CONF = {
   port: 6379,

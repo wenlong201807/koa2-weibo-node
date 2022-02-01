@@ -23,3 +23,6 @@ seq.sync({ force: true }).then(() => {
   console.log('sync ok')
   process.exit()
 })
+
+// 将代码构建的数据同步到数据库中
+// node src/db/sync.js

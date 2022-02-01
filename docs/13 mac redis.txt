@@ -1,0 +1,30 @@
+mac 安装redis
+
+参考资料 https://www.jianshu.com/p/6b5eca8d908b
+
+1 目标：下载安装包 redis-3.0.7.tar.gz
+2 官网地址：http://redis.io/download
+3 解压：tar -zvxf redis-3.0.7.tar.gz  将解压后的文件夹放到 /usr/local目录下
+4 编译测试:接下来在终端中切换到/usr/local/redis目录下,输入：sudo make test
+5 编译安装：在终端中输入命令：sudo make install
+6 启动Redis,输入命令redis-server
+7 看到这个界面表示我们已经成功的安装Redis。
+
+
+
+检查是否启动：redis-cli ping
+redis-cli 跟上命令会将参数发送到本地redis 6379 的端口
+
+mac中redis安装目录在Download
+cd /Users/zhuwenlong/Downloads/redis-6.2.6
+启动redis： redis-server
+启动之后，在任意目录下可以执行操作 redis-cli 之后可以查看redis所有信息。
+
+
+
+
+
+
+
+
+

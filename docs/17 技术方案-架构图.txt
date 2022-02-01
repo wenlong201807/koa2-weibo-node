@@ -1,0 +1,20 @@
+架构图
+
+包含内容
+
+1 页面和api
+2 routes  <- 日志
+  view
+  api
+  校验
+3 controller  <- 日志
+  业务逻辑
+  返回格式
+4 cache
+  公共信息  <- redis
+5 service
+  数据处理
+  格式化
+6 db sequelize  <- mysql
+  定义模型
+  封装操作

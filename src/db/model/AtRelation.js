@@ -3,8 +3,8 @@
  * @author wenlong
  */
 
-import seq from '../seq';
-import { INTEGER, BOOLEAN } from '../types';
+ const seq = require('../seq')
+ const { INTEGER, BOOLEAN } = require('../types')
 
 const AtRelation = seq.define('atRelation', {
   userId: {

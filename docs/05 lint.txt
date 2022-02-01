@@ -4,3 +4,8 @@ npm run lint 报错
 /Users/zhuwenlong/Desktop/koa2-weibo-node/src/utils/cryp.js
   0:0  error  Parsing error: require() of ES Module /Users/zhuwenlong/Desktop/koa2-weibo-node/node_modules/eslint-scope/lib/definition.js from /Users/zhuwenlong/Desktop/koa2-weibo-node/node_modules/babel-eslint/lib/require-from-eslint.js not supported.
 Instead change the require of definition.js in /Users/zhuwenlong/Desktop/koa2-weibo-node/node_modules/babel-eslint/lib/require-from-eslint.js to a dynamic import() which is available in all CommonJS modules
+
+提交前钩子暂时不用，有上面的报错
+"pre-commit": [
+    "lint"
+  ]

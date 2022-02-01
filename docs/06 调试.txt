@@ -1,0 +1,25 @@
+
+本地调试服务端代码：
+--inspect=9229  端口可以自定义
+
+"dev": "cross-env NODE_ENV=dev ./node_modules/.bin/nodemon --inspect=9229 bin/www",
+
+npm run dev
+
+浏览器tab页输入网址： chrome://inspect/#devices
+
+如果设置dubugger则需要访问对应的页面
+1 http://localhost:3000/
+2 刷新 chrome://inspect/#devices
+3 重新进入inspect模式，选择sources面板
+
+
+
+
+
+
+
+
+
+
+

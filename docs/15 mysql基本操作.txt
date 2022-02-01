@@ -1,0 +1,5 @@
+ show databases; // 显示数据库
+
+ use koa2_weibo_db; // 使用哪个数据库，必须先执行，才能查找表
+
+ select * from users; // 查询users 表内容
