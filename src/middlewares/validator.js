@@ -21,7 +21,7 @@ function genValidator(validateFn) {
       return
     }
     // 验证成功，继续
-    await next()
+    await next()  // 考虑周全
   }
   // 返回中间件
   return validator

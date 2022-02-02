@@ -71,10 +71,10 @@ async function register({ userName, password, gender }) {
  * @param {Object} ctx koa2 ctx
  * @param {string} userName 用户名
  * @param {string} password 密码
+ * 1 登陆成功 ctx.session.userInfo = xxx
  */
 async function login(ctx, userName, password) {
-  console.info('登陆：', userName, password)
-  // 获取用户信息
+  // 获取用户信息 密码已经做了加密功能
   const userInfo = await getUserInfo(userName, doCrypto(password))
   if (!userInfo) {
     // 登录失败
