@@ -22,6 +22,7 @@ async function createBlog({ userId, content, image }) {
 /**
  * 根据用户获取微博列表
  * @param {Object} param0 查询参数 { userName, pageIndex = 0, pageSize = 10 }
+ * 有连表查询
  */
 async function getBlogListByUser({ userName, pageIndex = 0, pageSize = 10 }) {
   // 拼接查询条件
@@ -35,7 +36,7 @@ async function getBlogListByUser({ userName, pageIndex = 0, pageSize = 10 }) {
     limit: pageSize, // 每页多少条
     offset: pageSize * pageIndex, // 跳过多少条
     order: [['id', 'desc']],
-    include: [
+    include: [ // 连表查询
       {
         model: User,
         attributes: ['userName', 'nickName', 'picture'],

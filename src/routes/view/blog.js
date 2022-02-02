@@ -60,18 +60,20 @@ router.get('/', loginRedirect, async (ctx, next) => {
   })
 })
 
-// 个人主页
+// 个人主页-路由重定向[无感触发]
 router.get('/profile', loginRedirect, async (ctx, next) => {
   const { userName } = ctx.session.userInfo
   ctx.redirect(`/profile/${userName}`)
 })
+
+// 个人主页-我的空间
 router.get('/profile/:userName', loginRedirect, async (ctx, next) => {
   // 已登录用户的信息
   const myUserInfo = ctx.session.userInfo
   const myUserName = myUserInfo.userName
 
   let curUserInfo
-  const { userName: curUserName } = ctx.params
+  const { userName: curUserName } = ctx.params // 获取浏览器中url的？前的参数
   const isMe = myUserName === curUserName
   if (isMe) {
     // 是当前登录用户
@@ -109,7 +111,7 @@ router.get('/profile/:userName', loginRedirect, async (ctx, next) => {
   const { count: atCount } = atCountResult.data
 
   await ctx.render('profile', {
-    blogData: {
+    blogData: { // 当前页的个人博客列表信息
       isEmpty,
       blogList,
       pageSize,

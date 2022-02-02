@@ -13,7 +13,7 @@ test('个人主页，加载第一页数据，应该成功', async () => {
     expect(res.body.errno).toBe(0)
 
     const data = res.body.data
-    expect(data).toHaveProperty('isEmpty')
+    expect(data).toHaveProperty('isEmpty') // toHaveProperty 是否有isEmpty这个属性
     expect(data).toHaveProperty('blogList')
     expect(data).toHaveProperty('pageSize')
     expect(data).toHaveProperty('pageIndex')

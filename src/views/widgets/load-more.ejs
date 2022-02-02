@@ -27,7 +27,7 @@
                 $btnLoadMore.hide()
             }
 
-            // 渲染页面
+            // 渲染页面 ssr渲染，直接append
             var $tempContainer = $(data.blogListTpl)
             $tempContainer.each(function (index, item) {
                 if (item.nodeType !== 1) {
