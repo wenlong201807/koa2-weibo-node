@@ -28,3 +28,17 @@
     font-size: 13px;
     color: #666;
 }
+
+
+
+.nav_left_ul {
+    display: flex;
+    height: 50px;
+    margin-left: 10px;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.nav_left_ul li.nav-item {
+    margin-right: 20px;
+}
