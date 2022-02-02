@@ -28,4 +28,4 @@ node_modules
 
 dump.rdb
 
-uploadFiles
+uploadFiles // 上传头像文件不用提交到仓库
