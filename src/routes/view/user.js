@@ -11,32 +11,32 @@ const { loginRedirect } = require('../../middlewares/loginChecks')
  * @param {Object} ctx ctx
  */
 function getLoginInfo(ctx) {
-    let data = {
-        isLogin: false // 默认未登录
-    }
+  let data = {
+    isLogin: false, // 默认未登录
+  }
 
-    const userInfo = ctx.session.userInfo
-    if (userInfo) {
-        data = {
-            isLogin: true,
-            userName: userInfo.userName
-        }
+  const userInfo = ctx.session.userInfo
+  if (userInfo) {
+    data = {
+      isLogin: true,
+      userName: userInfo.userName,
     }
+  }
 
-    return data
+  return data
 }
 
 router.get('/login', async (ctx, next) => {
-    // 浏览器中url中的路由  render('login'
-    await ctx.render('login', getLoginInfo(ctx))
+  // 浏览器中url中的路由  render('login'
+  await ctx.render('login', getLoginInfo(ctx))
 })
 
 router.get('/register', async (ctx, next) => {
-    await ctx.render('register', getLoginInfo(ctx))
+  await ctx.render('register', getLoginInfo(ctx))
 })
 
 router.get('/setting', loginRedirect, async (ctx, next) => {
-    await ctx.render('setting', ctx.session.userInfo)
+  await ctx.render('setting', ctx.session.userInfo)
 })
 
 module.exports = router

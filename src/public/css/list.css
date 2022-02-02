@@ -1,44 +1,30 @@
 .weibo-list .item-wrapper {
-    position: relative;
-    padding-left: 58px;
-    border-bottom: 1px solid #f1f1f1;
-    padding-bottom: 15px;
-    margin-bottom: 15px;
+  position: relative;
+  padding-left: 58px;
+  border-bottom: 1px solid #f1f1f1;
+  padding-bottom: 15px;
+  margin-bottom: 15px;
 }
 
 .weibo-list .item-wrapper .user-picture {
-    width: 48px;
-    position: absolute;
-    top: 5px;
-    left: 0;
+  width: 48px;
+  position: absolute;
+  top: 5px;
+  left: 0;
 }
 
 .weibo-list .item-wrapper .content {
-    line-height: 1.5;
+  line-height: 1.5;
 }
 
 .weibo-list .item-wrapper .content .blog-img {
-    float: right;
-    width: 100px;
-    margin-left: 10px;
+  float: right;
+  width: 100px;
+  margin-left: 10px;
 }
 
 .weibo-list .item-wrapper .info {
-    margin-top: 10px;
-    font-size: 13px;
-    color: #666;
-}
-
-
-
-.nav_left_ul {
-    display: flex;
-    height: 50px;
-    margin-left: 10px;
-    justify-content: flex-start;
-    align-items: center;
-}
-
-.nav_left_ul li.nav-item {
-    margin-right: 20px;
+  margin-top: 10px;
+  font-size: 13px;
+  color: #666;
 }
