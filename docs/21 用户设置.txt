@@ -1,0 +1,12 @@
+用户设置
+
+1 页面：模版和路由
+2 开发接口（修改信息，修改密码，退出登录，图片上传）
+3 单元测试
+
+
+具体化
+
+图像图片上传
+npm i fs-extra --save
+npm i formidable-upload-koa

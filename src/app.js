@@ -41,7 +41,7 @@ app.use(bodyparser({
 app.use(json())
 app.use(logger())
 app.use(koaStatic(__dirname + '/public'))
-app.use(koaStatic(path.join(__dirname, '..', 'uploadFiles')))
+app.use(koaStatic(path.join(__dirname, '..', 'uploadFiles'))) // 存储上传的头像文件，也是静态资源 /2.png
 
 app.use(views(__dirname + '/views', {
     extension: 'ejs'

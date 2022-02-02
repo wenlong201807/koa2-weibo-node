@@ -27,7 +27,7 @@ function getLoginInfo(ctx) {
 }
 
 router.get('/login', async (ctx, next) => {
-  // 浏览器中url中的路由  render('login'
+  // 浏览器中url中的路由  router.get('/login'
   await ctx.render('login', getLoginInfo(ctx))
 })
 
