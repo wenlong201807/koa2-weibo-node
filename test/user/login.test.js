@@ -68,7 +68,7 @@ test('修改基本信息应该成功', async () => {
       city: '测试城市',
       picture: '/test.png',
     })
-    .set('cookie', COOKIE)
+    .set('cookie', COOKIE) // 设置cookie
   expect(res.body.errno).toBe(0)
 })
 
@@ -80,7 +80,7 @@ test('修改密码应该成功', async () => {
       password,
       newPassword: `p_${Date.now()}`,
     })
-    .set('cookie', COOKIE)
+    .set('cookie', COOKIE) // 修改密码前，必须保证是登陆状态
   expect(res.body.errno).toBe(0)
 })
 

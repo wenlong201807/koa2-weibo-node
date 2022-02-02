@@ -40,7 +40,6 @@ router.post('/isExist', async (ctx, next) => {
 // 登录
 router.post('/login', async (ctx, next) => {
   const { userName, password } = ctx.request.body
-  console.info('userName, password // 登录:', userName, password)
   ctx.body = await login(ctx, userName, password)
 })
 
