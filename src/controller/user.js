@@ -91,6 +91,7 @@ async function login(ctx, userName, password) {
 /**
  * 删除当前用户
  * @param {string} userName 用户名
+ * 仅在测试环境中才提供此功能
  */
 async function deleteCurUser(userName) {
   const result = await deleteUser(userName)
