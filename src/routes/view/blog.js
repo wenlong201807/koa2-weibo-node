@@ -118,7 +118,7 @@ router.get('/profile/:userName', loginRedirect, async (ctx, next) => {
       pageIndex,
       count,
     },
-    userData: {
+    userData: { // 个人空间
       userInfo: curUserInfo,
       isMe,
       fansData: {

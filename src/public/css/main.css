@@ -1,5 +1,5 @@
 body {
-  padding: 0;
+  padding: 0 15px;
   margin: 0;
 }
 
@@ -74,4 +74,18 @@ a {
 
 .nav_left_ul li.nav-item {
   margin-right: 10px;
+}
+
+.row {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.row .col-8 {
+  width: 80%;
+}
+
+.row .col-4 {
+  margin-left: 5%;
+  width: 15%;
 }

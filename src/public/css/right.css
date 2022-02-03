@@ -10,10 +10,10 @@
 .right-item .user-info .header-img {
   width: 48px;
   height: 48px;
+  margin-right: 10px;
 }
 .right-item .user-info .user-name {
   line-height: 48px;
-  margin-left: 58px;
 }
 
 .right-item .user-list .user-item {
