@@ -13,6 +13,24 @@ const {
     L_USER_NAME
 } = require('../testUserInfo')
 
+// 存储 cookie // 绕过登陆验证
+let COOKIE = ''
+// 用户信息
+const userName = `u_${Date.now()}`
+const password = `p_${Date.now()}`
+// 登录
+// test('登录，获取当前cookie', async () => {
+//     const res = await server.post('/api/user/login').send({
+//       userName,
+//       password,
+//     })
+//     // expect(res.body.errno).toBe(0)
+  
+//     console.info('res.headers:', res.headers)
+//     // 获取 cookie // 拿过来? 删除用户使用
+//     COOKIE = res.headers['set-cookie'].join(';')
+// })
+
 // 先让张三取消关注李四（为了避免现在张三关注了李四）
 test('无论如何，先取消关注', async () => {
     const res = await server

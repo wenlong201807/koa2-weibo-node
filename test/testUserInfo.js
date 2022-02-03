@@ -9,11 +9,13 @@
  */
 
 module.exports = {
-    Z_ID: 1,
-    Z_USER_NAME: 'zhangsan',
-    Z_COOKIE: 'weibo.sid=GVLtgPb9NEUGioTqHqgNF2Djr7Y-6TFs; weibo.sid.sig=HTSmDI5JmSGYecrDI6fYb0qRTmk',
+  Z_ID: 1, // 用户表zhangsan的id
+  Z_USER_NAME: 'zhangsan',
+  Z_COOKIE:
+    'weibo.sid=6z-NdrnFX98RJjblDRrU7pATLPnchNtr; weibo.sid.sig=iiJ0fnWEeXnQnSOb7pkgwOlDSaU',
 
-    // L_ID: 2,
-    // L_USER_NAME: 'lisi',
-    // L_COOKIE: 'weibo.sid=686m0u92zMTCmmSQY85trYv_PScDgpFx; weibo.sid.sig=Za_Oj-wSLFrG5QzQhqQU0YQxOFo'
+  L_ID: 3, // 用户表lisi的id
+  L_USER_NAME: 'lisi',
+  L_COOKIE:
+    'weibo.sid=6z-NdrnFX98RJjblDRrU7pATLPnchNtr; weibo.sid.sig=iiJ0fnWEeXnQnSOb7pkgwOlDSaU',
 }
