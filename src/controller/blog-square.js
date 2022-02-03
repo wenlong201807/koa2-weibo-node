@@ -10,21 +10,22 @@ const { getSquareCacheList } = require('../cache/blog')
 /**
  * 获取广场的微博列表
  * @param {number} pageIndex pageIndex
+ * 进入cache层，通过redis访问数据库
  */
 async function getSquareBlogList(pageIndex = 0) {
-    const result = await getSquareCacheList(pageIndex, PAGE_SIZE)
-    const blogList = result.blogList
+  const result = await getSquareCacheList(pageIndex, PAGE_SIZE)
+  const blogList = result.blogList
 
-    // 拼接返回数据
-    return new SuccessModel({
-        isEmpty: blogList.length === 0,
-        blogList,
-        pageSize: PAGE_SIZE,
-        pageIndex,
-        count: result.count
-    })
+  // 拼接返回数据
+  return new SuccessModel({
+    isEmpty: blogList.length === 0,
+    blogList,
+    pageSize: PAGE_SIZE,
+    pageIndex,
+    count: result.count,
+  })
 }
 
 module.exports = {
-    getSquareBlogList
+  getSquareBlogList,
 }
