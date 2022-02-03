@@ -8,9 +8,13 @@
 
 .weibo-list .item-wrapper .user-picture {
   width: 48px;
+  height: 48px;
   position: absolute;
   top: 5px;
   left: 0;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  overflow: hidden;
 }
 
 .weibo-list .item-wrapper .content {
