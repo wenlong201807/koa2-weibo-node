@@ -78,7 +78,7 @@ async function getFollowersBlogList({ userId, pageIndex = 0, pageSize = 10 }) {
     limit: pageSize, // 每页多少条
     offset: pageSize * pageIndex, // 跳过多少条
     order: [['id', 'desc']],
-    include: [
+    include: [ // 三表联查
       {
         model: User,
         attributes: ['userName', 'nickName', 'picture'],

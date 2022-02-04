@@ -40,6 +40,7 @@
             <div class="right-item">
                 <%- include('widgets/user-info', {
                     userInfo: userData.userInfo,
+                    // 首页中，个人信息一定是自己的，同时不关注自己
                     isMe: true,
                     amIFollowed: false,
                     atCount: userData.atCount
