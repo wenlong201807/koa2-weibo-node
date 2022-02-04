@@ -1,0 +1,44 @@
+线上环境
+
+1 上线
+  将代码部署到服务器
+  执行命令重启服务
+2 如何部署
+  不好统一讲，不同公司不一样，介绍几种常见方式
+3 线上环境
+  需要前端人员开发了解必要的理论和工具
+4 如何部署，方式有很多
+  大公司：自研上线平台，专业团队维护，制定规范，傻瓜式操作
+  git服务加webhook，合并到master即自动触发部署
+  使用pm2 deploy,手动将本地代码部署到线上
+5 线上环境
+  pm2配置和使用
+  nginx代理
+  日志
+
+
+{
+  "apps": {
+    "name": "weibo",
+    "script": "bin/www",
+    "watch": true,
+    "ignore_watch": ["node_modules", "logs", "uploadFiles"],
+    "instances": 2, // 启动2个服务，一个挂了，另一个可以替补上，保证不会完全挂掉
+    "error_file": "./logs/err.log",
+    "out_file": "./logs/out.log",
+    "log_date_format": "YYYY-MM-DD HH:mm:ss"
+  }
+}
+pm2 用法 https://www.npmjs.com/package/pm2
+
+$ pm2 stop     <app_name|namespace|id|'all'|json_conf>
+$ pm2 restart  <app_name|namespace|id|'all'|json_conf>
+$ pm2 delete   <app_name|namespace|id|'all'|json_conf>
+$ pm2 monit
+$ pm2 reload all
+$ pm2 logs
+
+
+
+
+

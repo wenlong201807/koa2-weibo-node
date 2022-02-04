@@ -1,6 +1,6 @@
 {
   "apps": {
-    "name": "weibo",
+    "name": "chat-node",
     "script": "bin/www",
     "watch": true,
     "ignore_watch": ["node_modules", "logs", "uploadFiles"],
