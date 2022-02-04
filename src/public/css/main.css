@@ -89,3 +89,7 @@ a {
   margin-left: 5%;
   width: 15%;
 }
+
+.nav-cur {
+  color: red;
+}

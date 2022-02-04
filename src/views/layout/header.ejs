@@ -55,28 +55,56 @@
         <a class="navbar-brand" href="/">唠嗑</a>
         <ul class="mr-auto nav_left_ul">
             <li class="nav-item">
-                <a class="nav-link" href="/">
-                    <i class="fa fa-home"></i>
-                    首页
-                </a>
+                <% if (page === 'home') { %>
+                    <a class="nav-link nav-cur" href="/">
+                        <i class="fa fa-home"></i>
+                        首页
+                    </a>
+                <% } else { %>
+                    <a class="nav-link" href="/">
+                        <i class="fa fa-home"></i>
+                        首页
+                    </a>
+                <% } %>  
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/profile">
-                    <i class="fa fa-user"></i>
-                    我说
-                </a>
+                <% if (page === 'profile') { %>
+                    <a class="nav-link nav-cur" href="/profile">
+                        <i class="fa fa-user"></i>
+                        我说
+                    </a>
+                <% } else { %>
+                    <a class="nav-link" href="/profile">
+                        <i class="fa fa-user"></i>
+                        我说
+                    </a>
+                <% } %>  
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/square">
-                    <i class="fa fa-group"></i>
-                    众说纷纭
-                </a>
+                <% if (page === 'square') { %>
+                    <a class="nav-link nav-cur" href="/square">
+                        <i class="fa fa-group"></i>
+                        众说纷纭
+                    </a>
+                <% } else { %>
+                    <a class="nav-link" href="/square">
+                        <i class="fa fa-group"></i>
+                        众说纷纭
+                    </a>
+                <% } %> 
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/setting">
-                    <i class="fa fa-gear"></i>
-                    设置
-                </a>
+                <% if (page === 'setting') { %>
+                    <a class="nav-link nav-cur" href="/setting">
+                        <i class="fa fa-gear"></i>
+                        设置
+                    </a>
+                <% } else { %>
+                    <a class="nav-link" href="/setting">
+                        <i class="fa fa-gear"></i>
+                        设置
+                    </a>
+                <% } %> 
             </li>
         </ul>
     </nav>

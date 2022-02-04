@@ -17,11 +17,11 @@ async function getUsersByFollower(followerId) {
     order: [['id', 'desc']],
     include: [
       {
-        model: UserRelation,
+        model: UserRelation, // User表 关联 UserRelation表
         where: {
           followerId,
-          userId: {
-            [Sequelize.Op.ne]: followerId,
+          userId: { // 页面展示来说，自己不能是自己的粉丝，自己不能是自己的关注人
+            [Sequelize.Op.ne]: followerId, // [Sequelize.Op.ne] 不等于
           },
         },
       },
@@ -55,8 +55,8 @@ async function getFollowersByUser(userId) {
     ],
     where: {
       userId,
-      followerId: {
-        [Sequelize.Op.ne]: userId,
+      followerId: { // 页面展示来说，自己不能是自己的粉丝，自己不能是自己的关注人
+        [Sequelize.Op.ne]: userId, // [Sequelize.Op.ne] 不等于
       },
     },
   })

@@ -54,6 +54,7 @@ async function createUser({ userName, password, gender = 3, nickName }) {
   const data = result.dataValues
 
   // 自己关注自己（为了方便首页获取数据）
+  // 注意页面展示逻辑中，自己不能展示在自己的粉丝列表中，自己不能展示在自己的关注人列表中
   addFollower(data.id, data.id)
 
   return data

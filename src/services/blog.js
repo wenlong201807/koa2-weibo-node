@@ -36,15 +36,19 @@ async function getBlogListByUser({ userName, pageIndex = 0, pageSize = 10 }) {
     limit: pageSize, // 每页多少条
     offset: pageSize * pageIndex, // 跳过多少条
     order: [['id', 'desc']],
-    include: [ // 连表查询
-      {
+    include: [ // 连表查询, 前提是添加了关联关系 -> Blog.belongsTo(User
+      { // 两表查询
         model: User,
         attributes: ['userName', 'nickName', 'picture'],
         where: userWhereOpts,
       },
+      // { // 三表查询
+      //   model: UserRelation,
+      //   attributes: ['userName', 'nickName', 'picture'],
+      //   where: userWhereOpts,
+      // },
     ],
   })
-  console.info('根据用户获取微博列表result:', result)
   // result.count 总数，跟分页无关
   // result.rows 查询结果，数组
 
