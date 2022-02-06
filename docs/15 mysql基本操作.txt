@@ -1,5 +1,73 @@
+ CREATE DATABASE koa2_weibo_db; // 创建数据库
+
  show databases; // 显示数据库
 
  use koa2_weibo_db; // 使用哪个数据库，必须先执行，才能查找表
 
  select * from users; // 查询users 表内容
+
+ linux 中安装并使用mysql
+ https://blog.csdn.net/u011291990/article/details/80693925
+
+
+7.    创建root用户 密码为sql@123456
+
+    mysqladmin –u root password sql@123456
+
+[root@localhost ~]# mysqladmin -u root password sql@123456
+8.    连接mysql
+
+[root@localhost ~]# mysql -u root -p   --输入密码sql@123456
+
+9.    设置远程访问权限【未成功】
+
+mysql> use mysql
+mysql> GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY 'sql@123456' WITH GRANT OPTION; 
+mysql> GRANT ALL PRIVILEGES ON *.* TO 'root'@'192.168.2.8' IDENTIFIED BY 'sql@123456' WITH GRANT OPTION;  
+说明: --第一个admin为用户名，第二个admin为密码，%表示所有的电脑都可以链接
+mysql> flush privileges; --设置立即生效
+
+
+
+grant all privileges on *.* to root@'%' identified by 'sql@123456'; ？？ 没有成功
+
+————————————————
+版权声明：本文为CSDN博主「沐沐女神」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。
+原文链接：https://blog.csdn.net/u011291990/article/details/80693925
+
+
+
+参考资料 https://www.cnblogs.com/lyq-biu/p/10859273.html
+
+
+
+Linux MySql状态、启动、停止、重启命令
+1 ps -ef|grep mysqld 看看是否有mysqld_safe 和mysqld进程
+2 如果已添加到系统服务中，可以service mysqld status
+
+3 启动MySQL服务
+  /etc/init.d/mysqld start
+  也可以用/etc/init.d/mysqld的简化命令启动MySQL服务：service mysqld start
+4 停止MySQL服务
+  /etc/init.d/mysqld stop
+  也可以使用服务命令：service mysqld stop
+5 重启MySQL服务
+  /etc/init.d/mysqld restart
+  也可以使用服务命令：service mysqld restart
+6 后台运行mysql
+  如果是远程登录之后运行的该命令的话关掉终端之后服务就停止了
+  要想关掉终端之后还正常运行须要使用nohup。
+  使用nohup命令后台运行命令之后，需要使用exit正常退出当前账户，这样才能保证命令一直在后台运行。
+  nohup service mysqld start >/opt/out.txt 2>&1 &
+  这个的意识是程序运行时的输出信息直接丢弃，这样就不会出现你上图中显示的些个信息了
+
+参考资料 https://blog.csdn.net/weixin_35931397/article/details/113469021
+参考资料 https://www.cnblogs.com/weitaming/p/8508963.html
+
+
+
+
+
+
+
+

@@ -41,4 +41,27 @@ $ pm2 logs
 
 
 
+linux中需要执行的操作
 
+将项目传入linux中
+scp -r /Users/zhuwenlong/Desktop/koa2-weibo-node root@47.98.181.79:/opt
+
+访问地址 47.98.181.79:3006
+
+1 在mysql中新建一个数据库 名字为 
+2 将数据库表导入mysql中 koa2-weibo-db
+3 将项目中的数据库表导入mysql 中的 koa2-weibo-db 数据库中 执行操作 
+  切记：【只需要在第一次操作即可，建立数据中的表字段后，不需要再次操作，否则覆盖原数据】
+  cd /opt/koa2-weibo-db
+  node src/db/sync.js
+4 mysql保持永久启动状态？？？？查看docs15mysql基本操作
+  
+5 redis保持永久启动状态？？？？ 参考：https://blog.csdn.net/weixin_28487433/article/details/112282919
+  cd /etc
+  vim redis.conf
+  修改内容
+    将daemonize no 修改为daemonize yes 开启守护进程
+    将protected-mode yes改为protected-mode no，否则外部访问会被拒绝。
+    将bind 127.0.0.1语句注释掉（该语句前面加#注释），否则只能本地访问，外部ip不能访问。
+  输入启动命令，并检查启动是否成功，在进程发现redis服务表示启动成功。
+    redis-server redis.conf

@@ -5,7 +5,7 @@
   "scripts": {
     "start": "node bin/www",
     "dev": "cross-env NODE_ENV=dev ./node_modules/.bin/nodemon bin/www",
-    "prd": "cross-env NODE_ENV=production PORT=3006 pm2 start pm2.conf.json",
+    "prod": "npm i && cross-env NODE_ENV=production PORT=3006 pm2 start pm2.conf.json",
     "lint": "eslint --ext .js ./src",
     "test:jest": "cross-env NODE_ENV=test jest --runInBand --forceExit --colors"
   },
